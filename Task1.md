@@ -1,110 +1,43 @@
-Git Task for Practice: Managing a Team Shopping List
-Task Description:
-You and your team are working on a collaborative shopping list project. Each person is responsible for adding their assigned items to the list without disrupting others’ work. You'll use Git to manage the process.
+# Git Task for Practice: Managing a Team Shopping List
 
-Steps to Complete the Task
-Initialize a Repository
+## Task Description:
+You and your team are working on a collaborative shopping list project. Each team member adds their assigned items to the list without disrupting others’ work. You'll use Git to manage the process.
 
-Create a new folder named TeamShoppingList and navigate into it.
-Run git init to initialize a Git repository.
-bash
-Copy code
-mkdir TeamShoppingList
-cd TeamShoppingList
-git init
-Set Up the Initial List
+---
 
-Create a file named shopping_list.txt and add the following content:
+## Steps to Complete the Task
 
-text
-Copy code
-Shopping List:
-- Fruits
-- Vegetables
-Stage and commit the changes.
+### 1. Clone the Repository
+- Clone an existing repository containing the initial setup for the project.
 
-bash
-Copy code
-git add shopping_list.txt
-git commit -m "Initial shopping list with Fruits and Vegetables"
-Create a Branch for Adding Dairy Items
+### 2. Set Up the Initial List
+- Create a file named `shopping_list.txt` and add the initial structure with the categories "Fruits" and "Vegetables."
+- Commit these changes to document the starting point.
 
-Create a branch called feature/add-dairy-items and switch to it.
+### 3. Create a Branch for Adding Dairy Items
+- Create a new branch named `feature/add-dairy-items` to work on adding dairy products without affecting the main branch.
+- Add items like "Milk" and "Cheese" to the list.
+- Commit the changes on this branch.
 
-bash
-Copy code
-git checkout -b feature/add-dairy-items
-Add the following items to shopping_list.txt:
+### 4. Switch to Main and Add Meat Items
+- Return to the `main` branch to add another set of changes.
+- Add items like "Chicken" and "Fish" under a "Meat" section.
+- Commit the changes to the main branch.
 
-text
-Copy code
-- Milk
-- Cheese
-Stage and commit the changes.
+### 5. Merge the Dairy Branch into Main
+- Merge the `feature/add-dairy-items` branch into the `main` branch.
+- If there are conflicts (e.g., changes to the same section of the file), resolve them by retaining both sets of changes.
+- Finalize the merged file to include all updates.
 
-bash
-Copy code
-git add shopping_list.txt
-git commit -m "Added dairy items to the shopping list"
-Switch to the Main Branch and Add Meat Items
+### 6. Tag the Completed Shopping List
+- Create a tag (`v1.0`) to mark the milestone of completing the initial version of the collaborative shopping list.
 
-Switch back to the main branch.
+### 7. Push Changes to the Remote Repository
+- Push the updated `main` branch and the new tag to the remote repository so the entire team can access the latest version.
 
-bash
-Copy code
-git checkout main
-Add the following items to shopping_list.txt:
+---
 
-text
-Copy code
-- Chicken
-- Fish
-Stage and commit the changes.
-
-bash
-Copy code
-git add shopping_list.txt
-git commit -m "Added meat items to the shopping list"
-Merge the Dairy Branch into Main
-
-Attempt to merge the feature/add-dairy-items branch into main.
-
-bash
-Copy code
-git merge feature/add-dairy-items
-If there are merge conflicts, resolve them by keeping both sets of changes.
-Example resolution in shopping_list.txt:
-
-text
-Copy code
-Shopping List:
-- Fruits
-- Vegetables
-- Milk
-- Cheese
-- Chicken
-- Fish
-Commit the merge.
-
-bash
-Copy code
-git add shopping_list.txt
-git commit -m "Resolved conflicts and merged dairy branch"
-Tag the Completed List
-
-Create a tag named v1.0 to mark the milestone of completing the shopping list.
-bash
-Copy code
-git tag v1.0
-Push Changes to Remote
-
-Push the main branch and tags to a remote repository (e.g., GitHub).
-bash
-Copy code
-git remote add origin <your-repository-URL>
-git push origin main --tags
-Objective
-Understand branch creation and management.
-Resolve merge conflicts.
-Use tags to mark milestones.
-Practice staging, committing, and pushing changes.
+## Objective
+- Learn how to work with cloned repositories.
+- Understand branch creation, merging, and conflict resolution.
+- Practice tagging milestones and collaborating on a shared codebase.
